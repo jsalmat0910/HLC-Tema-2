@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-item>
+    <ion-grid>
+      <!-- Id -->
+      <ion-row>
+        <p>{{ id }}</p>
+      </ion-row>
+
+      <!-- Marca -->
+      <ion-item>
+        <ion-label>Marca:</ion-label>
+        <ion-input [(ngModel)]="document.data.Marca"></ion-input>
+      </ion-item>
+    
+      <!-- Modelo -->
+      <ion-item>
+        <ion-label>Modelo:</ion-label>
+        <ion-input [(ngModel)]="document.data.Modelo"></ion-input> 
+      </ion-item>
+    
+      <!-- Motor -->
+      <ion-item>
+        <ion-label>Motorización:</ion-label>
+        <ion-input [(ngModel)]="document.data.Motorizacion"></ion-input> 
+      </ion-item>
+    
+      <!-- Matrícula -->
+      <ion-item>
+        <ion-label>Matrícula:</ion-label>
+        <ion-input [(ngModel)]="document.data.Matricula"></ion-input> 
+      </ion-item>
+    
+      <!-- Imagen -->
+      <ion-item>
+        <ion-label>Imagen:</ion-label>
+        <ion-input [(ngModel)]="document.data.imagen"></ion-input> 
+      </ion-item>
+      <ion-row>
+        <ion-img style="width: 500px; height: 500px;" src="{{ document.data.imagen }}"></ion-img>
+      </ion-row>
+    </ion-grid>
+    <ion-button (click)="clicBotonBorrar()">Borrar Coche</ion-button>
+    <ion-button (click)="clicBotonModificar()">Guardar Coche</ion-button>
+    <ion-button (click)="clicBotonVolver()">Volver</ion-button>
+  </ion-item>
+</ion-content>

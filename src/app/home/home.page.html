@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Concesionario Coches - Firestore
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>LISTA DE COCHES</h1>
+  <ion-list>
+    <ion-item *ngFor="let documentCoche of arrayColeccionCoche" (click)="selecCoche(documentCoche)">
+      <ion-grid>
+        <ion-row>
+          <h2>{{ documentCoche.data.Marca }}</h2>
+        </ion-row>
+        <ion-row>
+          <p>{{ documentCoche.data.Modelo}}</p>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  <ion-fab-button class="botonCrear"  (click)="clicBotonCrear()">Crear</ion-fab-button>
+</ion-content>
